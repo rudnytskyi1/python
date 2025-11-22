@@ -28,14 +28,14 @@ class Television:
     def volume_up(self):
         if self.__status:
             if self.__muted:
-                self.mute()
+                self.__muted = False
             if self.__volume < self.MAX_VOLUME:
                 self.__volume += 1
 
     def volume_down(self):
         if self.__status:
             if self.__muted:
-                self.mute()
+                self.__muted = False
             if self.__volume > self.MIN_VOLUME:
                 self.__volume -= 1
 
