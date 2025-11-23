@@ -36,7 +36,7 @@ class Television:
         """Increase volume and unmute tv"""
         if self.__status:
             if self.__muted:
-                self.mute()
+                self.__muted = False
             if self.__volume < Television.MAX_VOLUME:
                 self.__volume += 1
 
@@ -44,7 +44,7 @@ class Television:
         """Decrease volume and unmute tv"""
         if self.__status:
             if self.__muted:
-                self.mute()
+                self.__muted = False
             if self.__volume > Television.MIN_VOLUME:
                 self.__volume -= 1
 
